@@ -1,0 +1,93 @@
+<?xml version = "1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name = "ODM">
+    	<xs:complexType>
+      		<xs:sequence>
+        		<xs:element name = "siniestros">
+          			<xs:complexType>
+            			<xs:sequence>
+              				<xs:element name = "ID" type = "xs:integer"/>
+              				<xs:element name = "placa" type = "xs:string">
+                				<xs:complexType>
+                  					<xs:sequence>
+                    					<xs:element name = "num_placa" type = "xs:integer"/>
+                    					<xs:element name = "evento_placa" type = "xs:integer"/>
+                    					<xsl:variable name = "precalificado_placa"/> 
+                  					</xs:sequence>
+                				</xs:complexType>
+              				</xs:element>
+              				<xs:element name = "serie" type = "xs:string">
+                				<xs:complexType>
+                  					<xs:sequence>
+                    					<xs:element name = "num_serie" type = "xs:integer"/>
+                    					<xs:element name = "evento_serie" type = "xs:integer"/>
+										<xsl:variable name = "precalificado_serie"/> 
+                  					</xs:sequence>
+                				</xs:complexType>
+              				</xs:element>
+              				<xs:element name = "contratante" type = "xs:string">
+                				<xs:complexType>
+                  					<xs:sequence>
+                    					<xs:element name = "rfc_contratante" type = "xs:string"/>
+                    					<xs:element name = "evento_contratante" type = "xs:integer"/>
+                    					<xsl:variable name = "precalificado_contratante"/> 
+                  					</xs:sequence>
+                				</xs:complexType>
+              				</xs:element>
+              				<xs:element name = "conductor" type = "xs:string">
+                				<xs:complexType>
+                  					<xs:sequence>
+                    					<xs:element name = "rfc_conductor" type = "xs:string"/>
+                    					<xs:element name = "evento_conductor" type = "xs:integer"/>
+                    					<xsl:variable name = "precalificado_conductor"/> 
+                  					</xs:sequence>
+                				</xs:complexType>
+              				</xs:element>
+            			</xs:sequence>
+          			</xs:complexType>
+        		</xs:element>
+
+        		<xs:element name = "tabla_placa">
+        			<xa:complexType>
+        				<xs:sequence>
+        					<xs:element name = "placa"/>
+        				</xs:sequence>
+        			</xa:complexType>
+        		</xs:element>
+
+        		<xs:element name = "tabla_serie">
+        			<xa:complexType>
+        				<xs:sequence>
+        					<xs:element name = "serie"/>
+        				</xs:sequence>
+        			</xa:complexType>
+        		</xs:element>
+
+        		<xs:element name = "tabla_contratante">
+        			<xa:complexType>
+        				<xs:sequence>
+        					<xs:element name = "contratante"/>
+        				</xs:sequence>
+        			</xa:complexType>
+        		</xs:element>
+
+        		<xs:element name = "tabla_conductor">
+        			<xa:complexType>
+        				<xs:sequence>
+        					<xs:element name = "conductor"/>
+        				</xs:sequence>
+        			</xa:complexType>
+        		</xs:element>
+
+        		<xs:element name = "tabla_eventos">
+        			<xa:complexType>
+        				<xs:sequence>
+        					<xs:element name = "evento"/>
+        				</xs:sequence>
+        			</xa:complexType>
+        		</xs:element>
+      		</xs:sequence>
+    	</xs:complexType>
+  	</xs:element>
+</xs:schema>
